@@ -1,0 +1,21 @@
+.logo{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.still{
+    position: absolute;
+    right: 0px;
+    bottom: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo, .still{
+        display: none;
+    }
+
+    .still{
+        width: 50%;
+    }
+}
