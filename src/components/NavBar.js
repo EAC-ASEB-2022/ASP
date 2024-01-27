@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate, useNavigation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function NavBar({data, active}) {
 
@@ -13,7 +13,7 @@ function NavBar({data, active}) {
     <div style={{display: 'flex', justifyContent: 'space-between', width: "96%", alignItems: 'center', position: 'sticky', top: 0, padding: 30}}>
         <div style={{fontFamily: "Poppins", fontSize: 14, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 10}}>
             <p style={{color: '#c0c0c0'}}>Hello</p>
-            <p style={{color: "#ffffff"}}>{data?.displayName.split("-")[0]}</p>
+            <p style={{color: "#ffffff", textTransform: "capitalize"}}>{data?.displayName.split("-")[0].toLowerCase()}</p>
         </div>
         <div style={{display: 'flex', gap: 20, alignItems: 'center'}}>
             <button style={{fontFamily: "Poppins", background: "none", color: active == "/timetable" ? "#ffffff" : "#C0C0C0", border: 0, padding: 0, cursor: 'pointer'}}>Timetable</button>
