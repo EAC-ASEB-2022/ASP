@@ -1,10 +1,10 @@
-import { onAuthStateChanged } from 'firebase/auth'
 import React, { useEffect, useState } from 'react'
-import { auth } from '../firebaseConfig'
+import NavBar from '../components/NavBar'
 import { useLocation, useNavigate } from 'react-router-dom';
-import NavBar from '../components/NavBar';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../firebaseConfig';
 
-function Dashboard() {
+function Resources() {
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -20,10 +20,10 @@ function Dashboard() {
         <div style={{ backgroundColor: '#09090B', height: "100%", width: "100%", display: "flex", flexDirection: 'column', justifyContent: 'start', alignItems: 'start', minHeight: "100vh", minWidth: '100vw', flexDirection: 'column' }}>
             <NavBar data={user} active={location.pathname} />
             <div style={{ padding: 30, width: "96%", display: 'flex', justifyContent: 'center' }}>
-                <p style={{ color: 'white' }}>Dashboard</p>
+                <p style={{ color: 'white' }}>Resources</p>
             </div>
         </div>
     )
 }
 
-export default Dashboard
+export default Resources
